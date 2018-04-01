@@ -26,12 +26,12 @@ class JDBookSpider(scrapy.Spider):
 
     def parse_urls(self, response):
         # 获取商品总数，计算出总页数
-        total = int(response.css('span@J_resCount::text').extract_first())
+        total = int(response.css('span#J_resCount::text').extract_first().strip('+'))
         pageNum = total // 60 + (1 if total % 60 else 0)
 
         # 构造每页的 url，向 Splash 的 execute 端点发送请求
         for i in range(pageNum):
-            url = '%s&page=%s' % (self.base_url, 2*1+1)
+            url = '%s&page=%s' % (self.base_url, 2*i+1)
             yield SplashRequest(url, endpoint='execute', args={'lua_source': lua_script},\
                                 cache_args=['lua_source'])
 
