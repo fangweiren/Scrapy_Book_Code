@@ -51,5 +51,5 @@ douban_movie
 使用 scrapy-redis 进行分布式爬取  
 toscrape_book_distributed
 
-[redis 的使用](http://www.iamnancy.top/post/51/)
+[redis 的使用](http://www.iamnancy.top/post/51/)  
 [使用 scrapy-redis 进行分布式爬取](http://www.iamnancy.top/post/50/)
