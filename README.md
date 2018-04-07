@@ -44,8 +44,12 @@ mysql_toscrape
 proxy_example
 
 2.爬取豆瓣电影信息  
-douban_movie
+douban_movie  
+[Scrapy shell url 调试返回 403 错误](http://www.iamnancy.top/post/47/)
 
 ### 第十四章 分布式爬取
 使用 scrapy-redis 进行分布式爬取  
 toscrape_book_distributed
+
+[redis 的使用](http://www.iamnancy.top/post/51/)
+[使用 scrapy-redis 进行分布式爬取](http://www.iamnancy.top/post/50/)
